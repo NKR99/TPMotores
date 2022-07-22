@@ -20,12 +20,14 @@ public class MetalEnemy : MonoBehaviour
         LookAt();
     }
 
+    // Sigue al personaje con una velocidad lerp
     void FollowLerp()
     {
         transform.position = Vector3.Lerp(transform.position, transformPlayer.position, speedEnemy * Time.deltaTime);
 
     }
 
+    // Chequea distancia al Player, a 2 unidades de distancia se detiene, sino continua.  
     void CheckDistancia()
     {
         float dist = Vector3.Distance(transform.position, transformPlayer.position);
@@ -40,6 +42,7 @@ public class MetalEnemy : MonoBehaviour
         }
     }
 
+    //mira siempre al jugador
     void LookAt()
     {
 

@@ -18,6 +18,7 @@ public class DenimEnemy : MonoBehaviour
         LookAtQ();
     }
 
+    // Mira la posición del Player implementando Quaternion + Lerp
     void LookAtQ()
     {
 
